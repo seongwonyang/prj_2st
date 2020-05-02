@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DKEA</title>
+</head>
+<body>
+<div>
+    <h1>DKEA - 메인 페이지</h1>
+    {% for pro in main %}
+    <button onclick="window.location.href='{% url 'dkea:list' pro.c_code %}'"> {{pro.c_name}} </button>
+    {% endfor %}
+
+</div>
+</body>
+</html>

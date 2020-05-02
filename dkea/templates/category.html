@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DKEA CATEGORY</title>
+</head>
+<body>
+    <div>
+        <h1>DKEA - 카테고리 별 상품 리스트 페이지</h1>
+
+            <h2> 카테고리 > {{cate_cname}} </h2>
+
+
+
+        <div style="text-align:center">
+        {% for pro in cate %}
+        <div style="display: inline-block; border:3px solid black; margin:5px">
+            <img src="{{pro.img_src}}" width="360" height="350" align="center" border="0"/> <br>
+            <p align="center"> <a href="{% url 'dkea:detail' pro.p_id %}"> {{pro.p_name}} </a> </p>
+        </div>
+        {% endfor %}
+        </div>
+
+    </div>
+</body>
+</html>
