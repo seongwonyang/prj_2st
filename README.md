@@ -1,0 +1,1 @@
+Django Project 2 | Dkea 쇼핑몰 서비스
